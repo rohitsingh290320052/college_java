@@ -2,83 +2,89 @@ import java.util.Scanner;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
-public class Main {
-    public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
 
+
+
+/* 1.write a program to print 1 to N natural number using while loop ;
+        2.do the same using do while;
+        3.1 to n natrural number using for loop;
+        4.calculator using switch case;
+        5.write a program to calculate a facrorial of number;
+        6.write a program to print the table of a number;*/
+
+
+
+public class Main {
+    public static int fact(int f){
+        if(f==0)
+            return 1;
+        else
+            return f*fact(f-1);
+    }
+
+    public static void main(String[] args) {
 
         Scanner sc=new Scanner(System.in);
-        int a=5;
-        int b=6;
-        int sum=a+b;
-        System.out.println("sum="+sum);
+        System.out.println("enter the number you want the natural numbers to be up to");
 
 
-        System.out.println("Area of circle");
-        float pi=3.14f;
-        int r=10;
-        float area = pi * r * r;
-        System.out.println(area);
-
-
-        System.out.println("area of rectangle");
-        int length=sc.nextInt();
-        int bredth=sc.nextInt();
-        int area_rec= length * bredth;
-        System.out.println(area_rec);
-
-        System.out.println("simple interest");
-        int principle=sc.nextInt();
-        int Time=sc.nextInt();
-        int interest=sc.nextInt();
-        float simple_interesrt=(principle* Time *interest)/100f;
-        System.out.println(simple_interesrt);
-
-        System.out.println("leep year");
-        int year=sc.nextInt();
-        if(year%4==0 || year%400==0 && year%100!=0){
-            System.out.println("given year is a leep year");
-
+        int a=sc.nextInt();
+        System.out.println("nautural number using while loop");
+        int i=1;
+        while (i<=a){
+            System.out.println(i);
+            i++;
         }
 
-        System.out.println("even numbers");
-        int start=sc.nextInt();
-        int end=sc.nextInt();
-        for(int i=start;i<=end;i++){
-            if(i%2==0)
-                System.out.println(i);
-        }
-        System.out.println("max");
-        int first=sc.nextInt();
-        int second=sc.nextInt();
-        int third=sc.nextInt();
-        if(first>=second && first>=third)
-            System.out.println(first +"is greatest");
-        else if(second>=first && second>=third)
-            System.out.println(second+ "is greatest");
-        else{
-            System.out.println(third+"is greatest");
-
+        System.out.println("natural number using for loop");
+        for(i=1;i<=a;i++){
+            System.out.println(i);
         }
 
-        System.out.println("divisible by 6 and 7");
+        System.out.println("calculator using switch case");
+        System.out.println("enter values of x and y");
+        int x=sc.nextInt();
+        int y=sc.nextInt();
+        System.out.println("enter operation");
+        String operation=sc.next();
+        switch (operation){
+            case "+":
+                System.out.println("sum="+(x+y));
+                break;
+            case "-":
+                System.out.println("subtraction="+(x-y));
+                break;
+            case "/":
+                System.out.println("division="+(x/y));
+                break;
+            case "%":
+                if(y==0){
+                    System.out.println("denominator can't be zero");
+                    break;
+                }
+                else {
+                    System.out.println("remainder=" + (x % y));
+                    break;
+                }
+            case "*":
+                System.out.println("multiplication="+(x*y));
+                break;
+            default:
+                System.out.println("unknown operation");
+
+        }
+        System.out.println("factorial of a number");
+        System.out.println("enter the number");
         int num=sc.nextInt();
-        if(num%6==0 && num%7==0)
-            System.out.println(num + "is diviseble by both 6 and 7");
-        else{
-            System.out.println(num + "is not divisible by 7");
+        System.out.println("factorial="+fact(num));
+
+        System.out.println("table of a number");
+        int number=sc.nextInt();
+        for(int t=1;t<=10;t++){
+            System.out.println(number+"*"+t+"="+number*t);
         }
 
-        
-
-
-
-
-
-
-
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
 
     }
+
 }
