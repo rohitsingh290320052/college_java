@@ -9,49 +9,62 @@ public class Main {
 
 
         Scanner sc=new Scanner(System.in);
-        int a=5;
-        int b=6;
+        System.out.println("sum of two numbers");
+        System.out.println("enter numbers");
+        int a=sc.nextInt();
+        int b=sc.nextInt();
         int sum=a+b;
         System.out.println("sum="+sum);
 
 
         System.out.println("Area of circle");
         float pi=3.14f;
-        int r=10;
+        System.out.println("enter radius");
+        int r=sc.nextInt();
         float area = pi * r * r;
         System.out.println(area);
 
 
         System.out.println("area of rectangle");
+        System.out.println("enter length");
         int length=sc.nextInt();
+        System.out.println("enter bredth");
         int bredth=sc.nextInt();
         int area_rec= length * bredth;
         System.out.println(area_rec);
 
         System.out.println("simple interest");
+        System.out.println("principle=");
         int principle=sc.nextInt();
-        int Time=sc.nextInt();
+        System.out.println("time=");
+        float Time=sc.nextFloat();
+        System.out.println("rate=");
         int interest=sc.nextInt();
-        float simple_interesrt=(principle* Time *interest)/100f;
-        System.out.println(simple_interesrt);
+        float simple_interesrt=(principle* Time *interest);
+        System.out.println("simple interest="+simple_interesrt);
+
 
         System.out.println("leep year");
+        System.out.println("enter year");
         int year=sc.nextInt();
         if(year%4==0 || year%400==0 && year%100!=0){
             System.out.println("given year is a leep year");
-
         }
+        else
+            System.out.println("year is not leep");
 
-        System.out.println("even numbers");
-        int start=sc.nextInt();
-        int end=sc.nextInt();
-        for(int i=start;i<=end;i++){
-            if(i%2==0)
-                System.out.println(i);
-        }
+        System.out.println("even number");
+        int num_even=sc.nextInt();
+        if(num_even%2==0)
+            System.out.println("even");
+        else
+            System.out.println("not even");
         System.out.println("max");
+        System.out.println("first num=");
         int first=sc.nextInt();
+        System.out.println("second num=");
         int second=sc.nextInt();
+        System.out.println("third num=");
         int third=sc.nextInt();
         if(first>=second && first>=third)
             System.out.println(first +"is greatest");
@@ -67,7 +80,7 @@ public class Main {
         if(num%6==0 && num%7==0)
             System.out.println(num + "is diviseble by both 6 and 7");
         else{
-            System.out.println(num + "is not divisible by 7");
+            System.out.println(num + "is not divisible by 6 and 7");
         }
 
         
