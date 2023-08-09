@@ -28,6 +28,8 @@ public class homework {
     }
 
     public static void main(String[] args) {
+        System.out.println("Rohit Singh");
+        System.out.println("Roll no:-56");
 
         Scanner sc=new Scanner(System.in);
         System.out.println("enter the number you want the natural numbers to be up to");
